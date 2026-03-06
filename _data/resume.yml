@@ -1,185 +1,138 @@
-# 数据格式可以为 yaml(文件以.yml结尾) 或者json(文件以.json结尾)
-# 如果YAML格式的数据请先检查格式是否有误，可选检查工具 http://www.yamllint.com
+# Resume Data in YAML format
+# Validator: http://www.yamllint.com
 
-title: "求职简历"
-lang: "zh" #语言设置 zh表示中文 en 表示英语
-name: "刘登"
-jobtitle: "Python后端开发,爬虫,逆向" #可空不显示
-photo: "assets/img/photo.jpg" #照片可空，不显示
+title: "Resume"
+lang: "en" # Language set to English
+name: "Deng Liu (Leo)"
+jobtitle: "Python Backend Engineer | Web Scraper | Reverse Engineer"
+photo: "assets/img/photo.jpg"
 
-#联系方式
-contact: #联系方式连接等3~5行
-- text: "uamind@foxmail.com" #文本内容
-  href: 'mailto:uamind@foxmail.com' #链接，无链接则空
-  icon: 'icons/email.svg' #图标 svg文件
-- text: "15679488830"
+# Contact Information
+contact:
+- text: "uamind@foxmail.com"
+  href: 'mailto:uamind@foxmail.com'
+  icon: 'icons/email.svg'
+- text: "+86 15679488830"
   href: 'tel:15679488830'
   icon: 'icons/phone.svg'
-# - text: "mygithub"
-#   href: 'https://github.com/uamind'
-#   icon: 'icons/web.svg'
-- text: "GitHubID"
+- text: "GitHub: uamind"
   href: 'https://github.com/uamind'
   icon: "icons/github.svg"
-  attr: 'target="_blank"' #新标签页打开
-  # - text: "地址"
-  #   icon: "icons/location.svg"
+  attr: 'target="_blank"'
 
-#main下面是主体内容，类别条数不限
-main: #简历主要内容，
+# Main Content
+main:
 - type: skills
-  name: "技能"
+  name: "Skills"
   content:
-  - title: 编程语言
+  - title: Programming Languages
     items:
     - Python
     - C
     - Rust
-  - title: Skill Group
-    summary: "FastAPI, SQLModel, 爬虫/逆向, Pandas, PySide, Linux, PlayWright, PostgreSQL, Git"
+  - title: Tech Stack
+    summary: "FastAPI, SQLModel, Web Scraping/Reverse Engineering, Pandas, PySide, Linux, PlayWright, PostgreSQL, Git"
     items:
-    - 熟悉 **FastAPI** 异步架构，具备复杂权限管控与多维度流控开发经验。
-    - 熟练使用 **SQLModel (Pydantic + SQLAlchemy)** 进行高性能异步 ORM 数据建模。
-    - 深入理解 **浏览器指纹原理**，能熟练使用 Playwright 进行内核级指纹伪装与环境克隆。
-    - 具备 **JS 逆向能力**，熟悉 JSVMP 分析、反混淆技术及 Frida 对 App 的脱壳抓包。
-    - 能够利用 **C/Rust** 编写 Python 扩展模块，解决计算密集型任务的性能瓶颈。
-
-    # - 熟悉 FastApi 后端开发, 权限管控和流控开发
-    # - 熟悉 SQLModel 开发, 熟悉异步和同步 ORM 数据管理开发
-    # - 熟悉 httpx, playwright 框架进行网络爬虫和反爬虫绕过开发
-    # - 熟悉使用 playwright 进行指纹浏览器开发
-    # - 熟悉使用 Pandas 进行数据清洗和类型转化
-    # - 熟悉使用各大linux发行版的常用命令
-    # - 熟悉 python 多线程和异步开发
-    # - 了解并能够使用 frida 对 app 进行脱壳 并进行网络抓包
-    # - 了解并能够进行 jsvmp 进行逆向分析
-    # - 了解并能够进行 js 反混淆
-    # - 了解并能够使用 PySide 对GUI进行开发
-    # - 了解 PostgreSQL, Mysql, Git 常用的数据库和代码管理工具使用
-    # - 了解并能够使用 C, Rust 对需要大量计算的操作进行开发并对python进行补充
+    - Proficient in **FastAPI** asynchronous architecture with experience in RBAC and Rate Limiting.
+    - Expert in **SQLModel (Pydantic + SQLAlchemy)** for high-performance async ORM data management.
+    - Deep understanding of **Browser Fingerprinting**; skilled in using Playwright for kernel-level masking and environment cloning.
+    - Skilled in **JS Reverse Engineering**, including JSVMP analysis, de-obfuscation, and App hooking via Frida.
+    - Capable of developing Python extensions using **C/Rust** to optimize performance-critical tasks.
 
 - type: experience
-  name: 经验
+  name: Experience
   content:
-  - title: 软件开发
-    sub: 安徽奇瑞-数据中台
-    duration: "2025年7月 - 2026年3月"
+  - title: Software Engineer
+    sub: Anhui Chery - Data Middle Platform
+    duration: "Jul 2025 - Mar 2026"
     tags:
     - Python
-    - 爬虫
+    - Scraper
     - FastAPI
-    summary: 爬虫工程师/API开发
+    summary: Scraper Engineer / API Developer
     items:
-    - 爬虫采集框架开发
-    - API自动构建框架开发
-    - 爬虫项目和API开发。优化旧爬虫项目重构适配框架, 支撑了 20 万级数据抓取，反爬通过率 95% 以上
-    - 减少并优化了CPU和内存的使用率。并使用多线程+线程池对代码进行优化, 并对单个API进行限速避免了429, 增加通用的retry, 提高数据采集效率80%
+    - Developed a distributed web scraping and data acquisition framework.
+    - Engineered an automated API generation framework to accelerate backend delivery.
+    - Optimized legacy scraping projects; scaled data ingestion to 200k+ daily with a 95%+ success rate against anti-bot systems.
+    - Optimized CPU/RAM utilization using multi-threading and thread pools; implemented per-API rate limiting to prevent 429 errors, improving overall efficiency by 80%.
     open: open
 
-  - title: 软件开发
-    sub: 勇波软件工作室
-    duration: "2024年3月 - 2025年3月"
+  - title: Software Engineer
+    sub: Yongbo Software Studio
+    duration: "Mar 2024 - Mar 2025"
     tags:
     - Python
-    - js逆向
-    summary: 软件开发工程师/爬虫工程师
+    - JS Reverse
+    summary: Full Stack Engineer / Reverse Engineer
     items:
-    - 负责工作室软件项目开发, 统筹, 维护和服务器的部署, 运维
-    - 负责逆向软件和网站
-    - 模拟点击指纹浏览器开发
+    - Led end-to-end software development, including server deployment and DevOps maintenance.
+    - Conducted reverse engineering on complex desktop software and websites.
+    - Developed an anti-detection fingerprint browser based on simulated click interactions.
     open: open
-    #可以设置open默认展开
 
-  - title: 软件开发
-    sub: 浙江联通
-    duration: "2022年6月 - 2024年1月"
+  - title: Software Engineer
+    sub: Zhejiang Unicom
+    duration: "Jun 2022 - Jan 2024"
     tags:
     - Python
     - Linux
-    summary: 软件开发工程师/网络工程师
+    summary: Software Engineer / Network Engineer
     items:
-    - 负责对公司客户需要的软件进行开发
-    - 自动化运维工具开发
-    - 网络拓扑优化
-    - 改善网络通信延迟
+    - Developed customized software solutions for enterprise clients.
+    - Built automated O&M (Operations and Maintenance) tools to streamline workflows.
+    - Optimized network topology and effectively reduced communication latency.
     open: open
 
 - type: projects
-  name: 项目
+  name: Projects
   content:
-  - title: API端点和数据采集框架
-    duration: 2025年10月 - 2026年3月
-    # summary: 数据采集和API端点具有流控和权限管理, 自动化生成对应的增删改查API端点。
-    # detail:
-    #   md: _data/api.md
+  - title: "Automated API & Data Acquisition Framework"
+    duration: "Oct 2025 - Mar 2026"
     items:
-    - 核心开发：使用 **FastAPI** 异步框架开发，支持高并发环境下的数据采集与接口分发。
-    - 自动化 ORM：实现根据数据库表自动生成 **SQLModel** 模型及标准化 RESTAPI 接口的底层逻辑。
-    - 采集引擎：深度封装 **Httpx / PyHttpx**，支持同步/异步双模式切换及自动重试和指数级回避策略。
-    - 逆向攻防：利用 **Playwright** 模拟浏览器环境，解决动态加密与设备指纹识别等反爬难题。
-    - 系统保障：集成 **JWT** 身份认证与流控插件，构建安全可控的数据中台。
-    sub: 刘登
+    - Core Dev: Built an async framework using **FastAPI** for high-concurrency data collection and API dispatching.
+    - Auto-ORM: Implemented metadata-driven logic to auto-generate **SQLModel** definitions and RESTful endpoints from DB schemas.
+    - Engine: Developed a wrapper for **Httpx/PyHttpx** supporting sync/async modes, auto-retries, and Exponential Backoff.
+    - Security: Integrated **JWT** authentication and rate-limiting modules for a secure, production-grade data platform.
+    sub: Deng Liu
 
-  - title: 直播采集
-    duration: 2025年1月 - 2025年3月
-    # detail: 这是一个抖音直播分析软件，可以监控直播数据并查看观众信息，支持百万级的观众并发。 GUI使用PySide开发, 支持Mac/Windows/Linux项目地址:https://github.com/uamind/douyinLiveSpider
+  - title: "Real-time Live Stream Monitor (Open Source)"
+    duration: "Jan 2025 - Mar 2025"
     items:
-    - 高并发架构：针对直播间海量弹幕与观众流，设计了高性能异步数据处理管道，单机支持百万级用户并发数据的实时解密与监控。
-    - 跨平台 GUI：基于 **PySide (Qt for Python)** 开发跨平台桌面应用，实现数据实时可视化看板与多任务异步管理。
-    - 开源贡献：项目已在 GitHub 开源（douyinLiveSpider），通过解耦协议层与 UI 层，获得了社区的积极反馈与持续维护。
-    - 开源仓库:https://github.com/uamind/douyinLiveSpider
-    sub: 刘登
+    - High Concurrency: Designed an async pipeline to monitor live stream data, supporting 1M+ concurrent user data decryption.
+    - GUI: Developed a cross-platform desktop app using **PySide** for real-time data visualization.
+    - Open Source: Published on GitHub (douyinLiveSpider) with decoupled protocol and UI layers.
+    - Repo: https://github.com/uamind/douyinLiveSpider
+    sub: Deng Liu
 
-  - title: 指纹浏览器
-    duration: 2024年3月 - 2024年4月
-    # detail: 使用PySide和PlayWright进行开发, 动态构建浏览器环境, 动态Canvas/WebGL/设备/音频/视频/CPU/GPU...指纹。
+  - title: "Fingerprint Browser (Anti-Detection)"
+    duration: "Mar 2024 - Apr 2024"
     items:
-    - 内核级环境伪装：基于 **Playwright** 二次开发，实现在浏览器上下文初始化（`init` 层）动态注入自研 JS 脚本，绕过高级反爬虫的指纹检测。
-    - 全维度特征模拟：通过拦截并重写 Web 接口，动态伪装 Canvas、WebGL、WebRTC、AudioContext 以及 CPU/GPU 设备硬件指纹。能够伪装为微信浏览器。
-    - 配置驱动：设计了独立的设备配置文件系统，支持一键切换并模拟真实的全球设备环境，极大地降低了账号关联封禁风险。
-    sub: 刘登
+    - Kernel Masking: Used **Playwright** to inject custom JS at the `init` layer, bypassing advanced fingerprinting (Canvas/WebGL).
+    - Feature Simulation: Masked WebRTC, AudioContext, and Hardware IDs (CPU/GPU); supports WeChat WebView simulation.
+    - Config-Driven: Built a profile system to manage isolated browser environments, significantly reducing account correlation risks.
+    sub: Deng Liu
 
-- type: education #类别为ID
-  name: 教育 #显示名称，空则使用type
-  content: #内容基本格式 标题-副标题-日期-详细内容 (都允许空)
-  - title: 电子科技大学
-    duration: "2019年9月 - 2022年"
-    sub: 大专
-    detail: 计算机应用技术
+- type: education
+  name: Education
+  content:
+  - title: University of Electronic Science and Technology of China (UESTC)
+    duration: "Sep 2019 - 2022"
+    sub: Associate Degree
+    detail: Computer Application Technology
 
-
-#others 其他简略内容(列表)
-others: #其他列表显示
-- type: others #ID可以为空
-  name: 其他
-  content: #选择需要的格式
-  # - title: "兴趣:"
-  #   items: #单行列表
-  #   - 睡觉
-  #   - 吃饭
-  #   - coding
-  - title: 兴趣
+others:
+- type: others
+  name: Others
+  content:
+  - title: Interests
     list:
-    - 睡觉
-    - 吃饭
-    - coding
-    - game
-#- type:
-#  name: '其他'
-#  content: #选择需要的格式
-#  - 单行文字
-#  - 如果有可以继续添加
+    - Coding
+    - Gaming
+    - Open Source Contribution
 
-#footer 脚注，打印版和web版不同不显示
-footer: #脚注多组
-  print: #打印版markdown或者html
+footer:
+  print:
   screen:
-  - text: "简历脚注"
-  #   href: '/'
-  - text: "Made with &hearts; by 刘登"
+  - text: "Resume"
+  - text: "Made with &hearts; by Deng Liu"
     href: "https://github.com/uamind/CVdocs/"
-
-#页面额外js脚本，如xx统计
-scripts:
-#- src: "assets/js/resume.js"
-#  defer: defer #可以设置defer或者sync异步加载
