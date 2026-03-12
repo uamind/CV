@@ -1,0 +1,138 @@
+# Resume Data in YAML format
+# Validator: http://www.yamllint.com
+
+title: "Resume"
+lang: "en" # Language set to English
+name: "Deng Liu (Leo)"
+jobtitle: "Python Backend Engineer | Web Scraper | Reverse Engineer"
+photo: "assets/img/photo.jpg"
+
+# Contact Information
+contact:
+- text: "uamind@foxmail.com"
+  href: 'mailto:uamind@foxmail.com'
+  icon: 'icons/email.svg'
+- text: "+86 15679488830"
+  href: 'tel:15679488830'
+  icon: 'icons/phone.svg'
+- text: "GitHub: uamind"
+  href: 'https://github.com/uamind'
+  icon: "icons/github.svg"
+  attr: 'target="_blank"'
+
+# Main Content
+main:
+- type: skills
+  name: "Skills"
+  content:
+  - title: Programming Languages
+    items:
+    - Python
+    - C
+    - Rust
+  - title: Tech Stack
+    summary: "FastAPI, SQLModel, Web Scraping/Reverse Engineering, Pandas, PySide, Linux, PlayWright, PostgreSQL, Git"
+    items:
+    - Proficient in **FastAPI** asynchronous architecture with experience in RBAC and Rate Limiting.
+    - Expert in **SQLModel (Pydantic + SQLAlchemy)** for high-performance async ORM data management.
+    - Deep understanding of **Browser Fingerprinting**; skilled in using Playwright for kernel-level masking and environment cloning.
+    - Skilled in **JS Reverse Engineering**, including JSVMP analysis, de-obfuscation, and App hooking via Frida.
+    - Capable of developing Python extensions using **C/Rust** to optimize performance-critical tasks.
+
+- type: experience
+  name: Experience
+  content:
+  - title: Software Engineer
+    sub: Anhui Chery - Data Middle Platform
+    duration: "Jul 2025 - Mar 2026"
+    tags:
+    - Python
+    - Scraper
+    - FastAPI
+    summary: Scraper Engineer / API Developer
+    items:
+    - Developed a distributed web scraping and data acquisition framework.
+    - Engineered an automated API generation framework to accelerate backend delivery.
+    - Optimized legacy scraping projects; scaled data ingestion to 200k+ daily with a 95%+ success rate against anti-bot systems.
+    - Optimized CPU/RAM utilization using multi-threading and thread pools; implemented per-API rate limiting to prevent 429 errors, improving overall efficiency by 80%.
+    open: open
+
+  - title: Software Engineer
+    sub: Yongbo Software Studio
+    duration: "Mar 2024 - Mar 2025"
+    tags:
+    - Python
+    - JS Reverse
+    summary: Full Stack Engineer / Reverse Engineer
+    items:
+    - Led end-to-end software development, including server deployment and DevOps maintenance.
+    - Conducted reverse engineering on complex desktop software and websites.
+    - Developed an anti-detection fingerprint browser based on simulated click interactions.
+    open: open
+
+  - title: Software Engineer
+    sub: Zhejiang Unicom
+    duration: "Jun 2022 - Jan 2024"
+    tags:
+    - Python
+    - Linux
+    summary: Software Engineer / Network Engineer
+    items:
+    - Developed customized software solutions for enterprise clients.
+    - Built automated O&M (Operations and Maintenance) tools to streamline workflows.
+    - Optimized network topology and effectively reduced communication latency.
+    open: open
+
+- type: projects
+  name: Projects
+  content:
+  - title: "Automated API & Data Acquisition Framework"
+    duration: "Oct 2025 - Mar 2026"
+    items:
+    - Core Dev: Built an async framework using **FastAPI** for high-concurrency data collection and API dispatching.
+    - Auto-ORM: Implemented metadata-driven logic to auto-generate **SQLModel** definitions and RESTful endpoints from DB schemas.
+    - Engine: Developed a wrapper for **Httpx/PyHttpx** supporting sync/async modes, auto-retries, and Exponential Backoff.
+    - Security: Integrated **JWT** authentication and rate-limiting modules for a secure, production-grade data platform.
+    sub: Deng Liu
+
+  - title: "Real-time Live Stream Monitor (Open Source)"
+    duration: "Jan 2025 - Mar 2025"
+    items:
+    - High Concurrency: Designed an async pipeline to monitor live stream data, supporting 1M+ concurrent user data decryption.
+    - GUI: Developed a cross-platform desktop app using **PySide** for real-time data visualization.
+    - Open Source: Published on GitHub (douyinLiveSpider) with decoupled protocol and UI layers.
+    - Repo: https://github.com/uamind/douyinLiveSpider
+    sub: Deng Liu
+
+  - title: "Fingerprint Browser (Anti-Detection)"
+    duration: "Mar 2024 - Apr 2024"
+    items:
+    - Kernel Masking: Used **Playwright** to inject custom JS at the `init` layer, bypassing advanced fingerprinting (Canvas/WebGL).
+    - Feature Simulation: Masked WebRTC, AudioContext, and Hardware IDs (CPU/GPU); supports WeChat WebView simulation.
+    - Config-Driven: Built a profile system to manage isolated browser environments, significantly reducing account correlation risks.
+    sub: Deng Liu
+
+- type: education
+  name: Education
+  content:
+  - title: University of Electronic Science and Technology of China (UESTC)
+    duration: "Sep 2019 - 2022"
+    sub: Associate Degree
+    detail: Computer Application Technology
+
+others:
+- type: others
+  name: Others
+  content:
+  - title: Interests
+    list:
+    - Coding
+    - Gaming
+    - Open Source Contribution
+
+footer:
+  print:
+  screen:
+  - text: "Resume"
+  - text: "Made with &hearts; by Deng Liu"
+    href: "https://github.com/uamind/CVdocs/"
