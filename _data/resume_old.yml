@@ -1,193 +1,111 @@
+# 验证工具：http://www.yamllint.com
 title: "求职简历"
-lang: "zh" #语言设置 zh表示中文 en 表示英语
+lang: "zh"
 name: "刘登"
-jobtitle: "Python后端开发,爬虫,逆向" #可空不显示
-photo: "assets/img/photo.jpg" #照片可空，不显示
+jobtitle: "Python后端开发 | 爬虫工程师 | 逆向安全"
+photo: "assets/img/photo.jpg"
 
-#联系方式
-contact: #联系方式连接等3~5行
-- text: "uamind@foxmail.com" #文本内容
-  href: 'mailto:uamind@foxmail.com' #链接，无链接则空
-  icon: 'icons/email.svg' #图标 svg文件
-- text: "15679488830"
-  href: 'tel:15679488830'
-  icon: 'icons/phone.svg'
-# - text: "mygithub"
-#   href: 'https://github.com/uamind'
-#   icon: 'icons/web.svg'
-- text: "GitHubID"
-  href: 'https://github.com/uamind'
-  icon: "icons/github.svg"
-  attr: 'target="_blank"' #新标签页打开
-  # - text: "地址"
-  #   icon: "icons/location.svg"
+# 联系方式
+contact:
+  - text: "uamind@foxmail.com"
+    href: "mailto:uamind@foxmail.com"
+    icon: "icons/email.svg"
+  - text: "15679488830"
+    href: "tel:15679488830"
+    icon: "icons/phone.svg"
+  - text: "GitHubID: uamind"
+    href: "https://github.com/uamind"
+    icon: "icons/github.svg"
+    attr: 'target="_blank"'
 
-#main下面是主体内容，类别条数不限
-main: #简历主要内容，
-- type: skills
-  name: "技能"
-  content:
-  - title: 编程语言
-    items:
-    - Python
-    - C
-    - Rust
-  - title: Skill Group
-    summary: "FastAPI, SQLModel, 爬虫/逆向, Pandas, PySide, Linux, PlayWright, PostgreSQL, Git"
-    items:
-    - 熟悉 **FastAPI** 异步架构，具备复杂权限管控与多维度流控开发经验。
-    - 熟练使用 **SQLModel (Pydantic + SQLAlchemy)** 进行高性能异步 ORM 数据建模。
-    - 深入理解 **浏览器指纹原理**，能熟练使用 Playwright 进行内核级指纹伪装与环境克隆。
-    - 具备 **JS 逆向能力**，熟悉 JSVMP 分析、反混淆技术及 Frida 对 App 的脱壳抓包。
-    - 能够利用 **C/Rust** 编写 Python 扩展模块，解决计算密集型任务的性能瓶颈。
-    - 能够使用pandas进行数据清理和数据处理
-    - 了解并能够使用 PySide/PyQT 对GUI进行开发
-    - 熟悉使用各大linux发行版的常用命令
-    - 熟悉反爬策略和反反爬处理
-    - 熟悉 python 多线程和异步程序开发
-    - 熟悉 pyinstaller 对项目进行打包分发
-    - 熟悉 uv 进行环境管理和配置
+# 简历主要内容
+main:
+  - type: skills
+    name: "专业技能"
+    content:
+      - title: 核心技术栈
+        summary: "Python, FastAPI, SQLModel, 爬虫/逆向, Pandas, Playwright, 高可用架构, PostgreSQL, Mysql, C, Rust"
+        items:
+          - 后端与高可用：深谙 FastAPI 异步架构与 JWT 权限体系；具备分布式集群下的“优雅停机”与任务热重载设计经验，确保系统高可用。
+          - 逆向与指纹对抗：精通 JSVMP/AST 反混淆及 Frida 动态抓包；熟练通过 Playwright 进行内核级指纹伪装，实现高强度反爬绕过。
+          - 爬虫与网络对抗：精通 httpx 异步网络编程；熟练应用 pyhttpx 进行 TLS 指纹（JA3）伪装与绕过；具备高压环境下的分布式爬虫调度经验。
+          - 反爬攻防：熟悉各类混淆加密、指纹识别绕过；精通多模态验证码（滑动轨迹、点选、坐标、OCR）的自动化识别与绕过，具备高强度对抗环境下的爬虫生存能力。
+          - 性能与数据工程：精通 Python 异步并发模型，擅长利用 C/Rust 编写扩展模块解决性能瓶颈；熟练应用 Pandas 进行海量数据清洗。
+          - 稳定性与运维：熟悉 Linux 生产环境及 uv 依赖管理；建立完备的日志隔离与多维度监控告警体系（Webhook），保障采集任务长期稳定运行。
+  - type: experience
+    name: "工作经验"
+    content:
+      - title: 爬虫架构师 / API 开发
+        sub: 安徽奇瑞 - 数据中台项目组
+        duration: "2025.07 - 2026.03"
+        summary: 负责数据中台采集标准制定与全量异步化重构
+        items:
+          - 业绩：主导自研异步采集框架，支撑 20万级/日 核心数据规模，反爬通过率稳定在 95% 以上。
+          - 效能：通过 SQLModel 自动化引擎与动态限速机制，降低业务开发周期 50%，提升采集效率 80%。
 
+      - title: 逆向工程师 / 全栈开发
+        sub: 勇波软件工作室
+        duration: "2024.03 - 2025.03"
+        summary: 核心安全产品研发与协议攻防
+        items:
+          - 攻防：完成多项头部 Web/App 协议逆向，利用 Gecko 内核指纹伪装技术解决高频封禁问题。
+          - 交付：独立统筹商业安全项目全生命周期，实现服务器集群容器化部署与自动化运维。
 
-- type: experience
-  name: 经验
-  content:
-  - title: 软件开发
-    sub: 安徽奇瑞-数据中台
-    duration: "2025年7月 - 2026年3月"
-    tags:
-    - Python
-    - 爬虫
-    - FastAPI
-    summary: 爬虫工程师/API开发
-    items:
-    - 爬虫采集框架开发：对旧项目进行整合重构并统一使用自研爬虫框架进行开发，使用httpx替换requests实现异步支持，并且实现sqlmodel数据类型自动处理，和pandas实现类型转换
-    - API自动构建框架开发：使用sqlmodel实现数据库管理封装，支持异步和同步分块数据保存。支持传入数据model创建增删改查的标准化异步API
-    - 爬虫项目和API开发。优化旧爬虫项目重构适配框架, 支撑了 20 万级数据抓取，反爬通过率 95% 以上
-    - 减少并优化了CPU和内存的使用率。并使用多线程+线程池对代码进行优化, 并对单个API进行限速避免了429, 增加通用的retry, 提高数据采集效率80%
-    open: open
+      - title: 早期职业经历 (联通/九木)
+        sub: 软件开发 / 安全运维
+        duration: "2020.03 - 2024.01"
+        summary: 积累了扎实的 Linux 运维与 Python 自动化开发底座
+        items:
+          - 核心产出：开发自动化网络巡检工具链；负责核心集群安全加固与渗透风险排查。
 
-  - title: 软件开发
-    sub: 勇波软件工作室
-    duration: "2024年3月 - 2025年3月"
-    tags:
-    - Python
-    - js逆向
-    summary: 软件开发工程师/爬虫工程师
-    items:
-    - 负责工作室软件项目开发, 统筹, 维护和服务器的部署, 运维
-    - 负责逆向软件和网站
-    - 模拟点击指纹浏览器开发：基于 Gecko 内核进行底层环境伪装，避开基于 Chromium 特征的检测，降低环境关联度
-    open: open
-    #可以设置open默认展开
+  - type: projects
+    name: "技术深度 (核心项目)"
+    content:
+      - title: 高可用异步(采集/API)框架 (FastAPI/Httpx/SQLModel)
+        items:
+          - 架构优化：设计异步主线程+线程池隔离模型，解决 Pandas 大量计算导致的 Event Loop 阻塞；引入优雅停机与状态重载，保障长耗时任务 0 丢失。
+          - 攻防集成：集成 CNN 识别模型与物理模拟轨迹算法，实现滑动/点选验证码自动化过检；利用 pyhttpx 维持会话一致性绕过高级风控。
+          - 持久化架构：基于 SQLModel 构建统一异步模型，通过数据库连接池优化与 Bulk Insert 机制，保障高并发写入下的一致性与存储性能。
+          - 动态运维：结合 PM2 管理进程，利用定时任务与状态检查实现热更新逻辑：当任务运行时自动阻塞重启指令，待执行完毕后平滑切换版本，确保业务连续性。
+        sub: 独立研发
 
-  - title: 软件开发
-    sub: 浙江联通
-    duration: "2022年6月 - 2024年1月"
-    tags:
-    - Python
-    - Linux
-    summary: 软件开发工程师/网络工程师
-    items:
-    - 负责对公司客户需要的软件进行开发
-    - 自动化运维工具开发
-    - 网络拓扑优化
-    - 改善网络通信延迟
-    open: open
+      - title: 内核级环境对抗沙箱 (Playwright)
+        items:
+          - 深度逆向：通过 Hook 底层 JSSDK 绕过某信小程序环境校验；通过重写 Canvas/WebGL 接口实现内核级指纹伪装。
+          - 风控画像：同步开发 Flask 指纹审计系统，通过采集高熵特征（Audio/RTC）进行反向验证，提升伪装成功率。
+        sub: 独立研发
 
-  - title: 安全运维
-    sub: 江西九木
-    duration: "2021年3月 - 2022年6月"
-    tags:
-    - Python
-    - Linux
-    summary: 软件开发工程师/安全运维工程师
-    items:
-    - 负责对服务器网络安全加固
-    - 自动化运维工具开发
-    - 运维数据管理
-    open: open
+      - title: 百万级并发直播监控系统 (Open Source)
+        items:
+          - 性能支撑：针对直播流海量弹幕，构建了高性能异步处理管道，实现单机百万级观众数据的实时解密。
+          - 工程化：基于 PySide 开发跨平台 GUI 客户端，项目已在 GitHub 开源并获得社区应用。
+        sub: 独立研发
 
-- type: projects
-  name: 项目
-  content:
-  - title: API端点和数据采集框架
-    duration: 2025年10月 - 2026年3月
-    # summary: 数据采集和API端点具有流控和权限管理, 自动化生成对应的增删改查API端点。
-    # detail:
-    #   md: _data/api.md
-    items:
-    - 兼容性：具有同步和异步两个基础的请求方法，并同时支持异步和同步的数据保存，原有项目不用大修改就可以兼容。
-    - 独立性：每个项目都放入有单独的日志文件夹，并且支持动态更新，当目前采集未完成就会等待任务完成后进行代码更新并启动，支持完成飞书告警。
-    - 核心开发：使用 **FastAPI** 异步框架开发，支持高并发环境下的数据采集与接口分发。
-    - 高效开发：节省数据处理和类型处理验证，使用了pandas实现自动化类型处理和数据清洗，同时也可以使用sqlmodel进行数据清洗和存储数据，同时支持异步数据保存和同步的方式。
-    - 自动化 ORM：实现根据数据库表自动生成 **SQLModel** 模型及标准化 RESTAPI 接口的底层逻辑。
-    - 采集引擎：深度封装 **Httpx / PyHttpx**，支持同步/异步双模式切换及自动重试和指数级回避策略。
-    - 逆向攻防：利用 **Playwright** 模拟浏览器环境，解决动态加密与设备指纹识别等反爬难题。
-    - 系统保障：集成 **JWT** 身份认证与流控插件，构建安全可控的数据中台。
-    sub: 刘登
+      - title: 10万级节点 IPMI 自动化运维平台
+        items:
+          - 规模化：实现数十万台服务器带外数据采集与硬件资产自动关联，建立硬件损耗动态感知模型。
+        sub: 独立研发
 
-  - title: 直播采集
-    duration: 2025年1月 - 2025年3月
-    # detail: 这是一个抖音直播分析软件，可以监控直播数据并查看观众信息，支持百万级的观众并发。 GUI使用PySide开发, 支持Mac/Windows/Linux项目地址:https://github.com/uamind/douyinLiveSpider
-    items:
-    - 高并发架构：针对直播间海量弹幕与观众流，设计了高性能异步数据处理管道，单机支持百万级用户并发数据的实时解密与监控。
-    - 跨平台 GUI：基于 **PySide (Qt for Python)** 开发跨平台桌面应用，实现数据实时可视化看板与多任务异步管理。
-    - 开源贡献：项目已在 GitHub 开源（douyinLiveSpider），通过解耦协议层与 UI 层，获得了社区的积极反馈与持续维护。
-    - 开源仓库:https://github.com/uamind/douyinLiveSpider
-    sub: 刘登
+  - type: education
+    name: "教育背景"
+    content:
+      - title: 电子科技大学
+        duration: "2019年9月 - 2022年6月"
+        sub: 大专
+        detail: 计算机应用技术
 
-  - title: 指纹浏览器
-    duration: 2024年3月 - 2024年4月
-    # detail: 使用PySide和PlayWright进行开发, 动态构建浏览器环境, 动态Canvas/WebGL/设备/音频/视频/CPU/GPU...指纹。
-    items:
-    - 成功绕过 某信 各个小程序 的环境监测并能够成功抓包
-    - 内核级环境伪装：基于 **Playwright** 二次开发，实现在浏览器上下文初始化（`init` 层）动态注入自研 JS 脚本，绕过高级反爬虫的指纹检测。
-    - 全维度特征模拟：通过拦截并重写 Web 接口，动态伪装 Canvas、WebGL、WebRTC、AudioContext 以及 CPU/GPU 设备硬件指纹。能够伪装为微信浏览器。
-    - 配置驱动：设计了独立的设备配置文件系统，支持一键切换并模拟真实的全球设备环境，极大地降低了账号关联封禁风险。
-    sub: 刘登
+others:
+  - type: others
+    name: "其他信息"
+    content:
+      - title: 兴趣领域
+        list:
+          - 持续关注 Python 异步生态与底层优化
+          - 深入研究 Web/App 协议逆向与反混淆技术
+          - 关注安全社区、开源项目维护
 
-- type: education #类别为ID
-  name: 教育 #显示名称，空则使用type
-  content: #内容基本格式 标题-副标题-日期-详细内容 (都允许空)
-  - title: 电子科技大学
-    duration: "2019年9月 - 2022年"
-    sub: 大专
-    detail: 计算机应用技术
-
-
-#others 其他简略内容(列表)
-others: #其他列表显示
-- type: others #ID可以为空
-  name: 其他
-  content: #选择需要的格式
-  # - title: "兴趣:"
-  #   items: #单行列表
-  #   - 睡觉
-  #   - 吃饭
-  #   - coding
-  - title: 兴趣
-    list:
-    - 关注python社区
-    - 逆向工程研究
-    - coding
-    - game
-#- type:
-#  name: '其他'
-#  content: #选择需要的格式
-#  - 单行文字
-#  - 如果有可以继续添加
-
-#footer 脚注，打印版和web版不同不显示
-footer: #脚注多组
-  print: #打印版markdown或者html
+footer:
   screen:
-  - text: "爬虫是互联网的基石"
-  #   href: '/'
-  - text: "Made with &hearts; by 刘登"
-    href: "https://github.com/uamind/CVdocs/"
-
-#页面额外js脚本，如xx统计
-scripts:
-#- src: "assets/js/resume.js"
-#  defer: defer #可以设置defer或者sync异步加载
+    - text: "爬虫是数据的搬运工，更是攻防的试金石"
+    - text: "Made by 刘登"
+      href: "https://github.com/uamind/"
