@@ -26,7 +26,7 @@ main:
       - title: 核心技术栈
         summary: "Python, FastAPI, SQLModel, 爬虫/逆向, Pandas, Playwright, 高可用架构, PostgreSQL, Mysql, C, Rust"
         items:
-          - 编程语言：Python,Rust,C
+          - 编程语言：Python、Rust、C。
           - 后端与高可用：深谙 FastAPI 异步架构与 JWT 权限体系；具备分布式集群下的“优雅停机”与任务热重载设计经验，确保系统高可用。
           - 逆向与指纹对抗：精通 JSVMP/AST 反混淆及 Frida 动态抓包；熟练通过 Playwright 进行内核级指纹伪装，实现高强度反爬绕过。
           - 爬虫与网络对抗：精通 httpx 异步网络编程；熟练应用 pyhttpx 进行 TLS 指纹（JA3）伪装与绕过；具备高压环境下的分布式爬虫调度经验。
