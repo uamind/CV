@@ -14,13 +14,155 @@ chrome 优先
     color: #222;
   }
 
+  body {
+    max-width: none;
+    text-align: left;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6mm;
+    padding: 5mm 0 3mm;
+  }
+
+  header .avatar {
+    flex: 0 0 25mm;
+    max-width: 25mm;
+  }
+
+  header .avatar img {
+    width: 23mm;
+    height: 23mm;
+    object-fit: cover;
+  }
+
+  header #name {
+    flex: 1 1 auto;
+    text-align: left;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header .jobtitle {
+    font-size: 1.05em;
+    text-align: left;
+  }
+
+  header .contact {
+    flex: 0 0 auto;
+    font-size: .9em;
+  }
+
   section {
-    margin: $print-section-margin;
-    padding: $print-section-padding;
+    display: block;
+    margin: 6px 0 0;
+    padding: 3px 0;
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  section:not(:first-child) {
+    border-top: .1em solid #bbb;
+  }
+
+  section h2,
+  section h2:lang(zh) {
+    display: block;
+    width: auto;
+    margin: 0 0 .35em;
+    padding: 0 0 .15em;
+    border-bottom: .08em solid #8bf;
+    color: #2878b5;
+    font-size: 1.25em;
+    text-align: left;
+  }
+
+  section .content {
+    display: block;
+    width: auto;
+    padding: 0;
   }
 
   .block:not(:first-child) {
     padding-top: .3em;
+  }
+
+  .block {
+    display: block;
+    margin: 4px 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .head,
+  .info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1em;
+  }
+
+  .head .title {
+    font-size: 1.08em;
+  }
+
+  .head .sub {
+    flex: 0 0 auto;
+    font-size: .92em;
+    text-align: right;
+  }
+
+  .info {
+    margin-top: .1em;
+    font-size: .9em;
+  }
+
+  .info .tag {
+    order: 1;
+  }
+
+  .info .time {
+    order: 2;
+    color: #2878b5;
+    white-space: nowrap;
+  }
+
+  .items {
+    display: block;
+    margin: .25em 0 0;
+    font-size: .92em;
+    line-height: 1.45em;
+  }
+
+  .items .item {
+    display: block;
+    margin: 0;
+    padding: 0 0 0 1.1em;
+    background: none;
+    border: 0;
+  }
+
+  .items .item::before {
+    content: '•';
+    display: inline-block;
+    width: 1.1em;
+    margin-left: -1.1em;
+    color: #2878b5;
+  }
+
+  .detail,
+  .text {
+    background: none;
+    color: #111;
+  }
+
+  .other .list .text {
+    display: list-item;
+    margin-left: 1.2em;
   }
 
   .head .sub {
